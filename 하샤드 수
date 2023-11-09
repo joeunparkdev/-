@@ -1,0 +1,15 @@
+function solution(x) {
+    var answer = false;
+    let sum = 0;
+    let arr = x.toString().split('').map(Number);
+
+    for (let i=0; i<arr.length; i++) {
+        sum += parseInt(arr[i]);
+
+    }
+
+    if (x%sum ==0) {
+        answer = true;
+    }
+    return answer;
+}
