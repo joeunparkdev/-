@@ -1,0 +1,9 @@
+function solution(n) {
+    let number = Array.from(String(n), Number);
+    number = number.sort(function(a, b) {
+  return b - a;
+});
+const string = (number.toString()).replaceAll(',','');
+    let answer = parseInt(string);
+    return answer;
+}
