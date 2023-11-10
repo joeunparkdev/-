@@ -1,0 +1,15 @@
+https://school.programmers.co.kr/learn/courses/30/lessons/12947
+
+function solution(a, b) {
+
+    if (a===b) {
+        return a;
+    }
+    
+    let start = Math.min(a, b);
+    let end = Math.max(a, b);
+    
+    let answer = ((end - start + 1) * (start + end)) / 2;
+    
+    return answer;
+}
