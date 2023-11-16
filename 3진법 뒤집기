@@ -1,0 +1,17 @@
+
+https://school.programmers.co.kr/learn/courses/30/lessons/68935
+function solution(n) {
+    var answer = 0;
+    let ternary = '';  
+    while (n > 0) {
+    //if n ==3 => '10'
+        ternary = (n % 3) + ternary;  // 나머지를 더해주어야 합니다.
+        n = Math.floor(n / 3);  // 몫을 새로운 n으로 설정
+    }
+    // 3진법을 뒤집고 10진법으로 변환
+    //'10' => '01'
+    let reversedTernary = ternary.split('').reverse().join('');
+    answer = parseInt(reversedTernary, 3); // 두번째 인자는 변환하고자 하는 진법(기수)을 나타냄
+
+    return answer;
+}
