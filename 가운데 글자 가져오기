@@ -1,0 +1,14 @@
+https://school.programmers.co.kr/learn/courses/30/lessons/12903
+
+function solution(s) {
+    var answer = '';
+    let mid = Math.floor(s.length/2);
+    
+    if (s.length%2===0){
+        answer = s.substring(mid-1,mid+1);
+    }
+    else {
+        answer = s.charAt(mid);
+    }
+    return answer;
+}
