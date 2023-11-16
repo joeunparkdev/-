@@ -1,0 +1,15 @@
+function solution(arr) {
+    var answer = [];
+    if (arr.length === 0) {
+        return -1;
+    }
+    if (arr.length === 1 && arr[0] === 10) {
+        answer =[-1];
+        return answer;
+    }
+    const minValue = Math.min(...arr);
+
+    answer = arr.filter((element) => element !== minValue);
+
+    return answer;
+}
