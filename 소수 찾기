@@ -1,0 +1,15 @@
+https://school.programmers.co.kr/learn/courses/30/lessons/42746
+
+function solution(numbers) {
+    // numbers 배열의 각 원소를 문자열로 변환하여 정렬
+   const sortedNumbers = numbers.map(String).sort((a, b) => (b + a).localeCompare(a + b));
+
+    
+    // 모든 원소가 0인 경우, 결과는 "0"
+    if (sortedNumbers[0] === "0") {
+        return "0";
+    }
+    
+    // 정렬된 문자열을 이어붙여 반환
+    return sortedNumbers.join('');
+}
